@@ -1,4 +1,6 @@
-package com.example.myyoutube
+package com.example.myyoutube.model
+
+import com.example.myyoutube.model.JSON.*
 
 data class YoutubePlaylistModel(
     val etag: String,

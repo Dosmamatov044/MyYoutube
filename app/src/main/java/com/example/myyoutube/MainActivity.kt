@@ -5,21 +5,17 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
+import androidx.navigation.Navigation
 import com.example.myyoutube.databinding.ActivityMainBinding
-import retrofit2.Call
-import retrofit2.Response
-import javax.security.auth.callback.Callback
+import com.example.myyoutube.screens.allPlaylist.PlayListViewModel
 
 
 class MainActivity:AppCompatActivity(){
 
 private lateinit var binding: ActivityMainBinding
-//private lateinit var navController: NavController
+private lateinit var navController: NavController
 
-val viewModel:PlayListViewModel by viewModels ()
+val viewModel: PlayListViewModel by viewModels ()
 
 
 
@@ -27,7 +23,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     binding = ActivityMainBinding.inflate(layoutInflater)
     setContentView(binding.root)
-
+    navController = Navigation.findNavController(this, R.id.fragmentHost)
  /*   val navHostFragment = supportFragmentManager
         .findFragmentById(R.id.fragmentContainerView) as NavHostFragment
     navController = navHostFragment.navController

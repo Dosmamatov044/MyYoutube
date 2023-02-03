@@ -1,8 +1,12 @@
-package com.example.myyoutube
+package com.example.myyoutube.screens.allPlaylist
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.myyoutube.App
+import com.example.myyoutube.Constants.KEY
+import com.example.myyoutube.model.JSON.Snippet
+import com.example.myyoutube.model.YoutubePlaylistModel
 import retrofit2.Call
 import retrofit2.Response
 
@@ -22,7 +26,7 @@ val playlist=MutableLiveData<Snippet> ()
     fun getPlaylist(){
         App.api?.let{
 
-            val userObject: Call<YoutubePlaylistModel> = it.getAllPlaylist("snippet,contentDetails","AIzaSyCO__x6rsVAwStDJukt7yHGVP7mDHY7u38","UCw3vK8lNe5SZzL--rMgq-CQ")
+            val userObject: Call<YoutubePlaylistModel> = it.getAllPlaylist("snippet,contentDetails",KEY,"UCw3vK8lNe5SZzL--rMgq-CQ")
 
 
             userObject.enqueue(object : retrofit2.Callback<YoutubePlaylistModel> {

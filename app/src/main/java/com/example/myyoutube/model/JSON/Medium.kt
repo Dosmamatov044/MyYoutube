@@ -1,6 +1,6 @@
-package com.example.myyoutube
+package com.example.myyoutube.model.JSON
 
-data class High(
+data class Medium(
     val height: Int,
     val url: String,
     val width: Int

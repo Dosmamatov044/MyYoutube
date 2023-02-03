@@ -1,4 +1,4 @@
-package com.example.myyoutube
+package com.example.myyoutube.model.JSON
 
 data class Snippet(
     val channelId: String,
