@@ -1,7 +1,6 @@
 package com.example.myyoutube
 
 import android.app.Application
-import com.example.myyoutube.room.YoutubeApi
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

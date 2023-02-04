@@ -11,8 +11,7 @@ android:id="@+id/fragment_list_playlist"
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvListPlaylist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/list_playlist_item">
+        android:layout_height="match_parent">
 
     </androidx.recyclerview.widget.RecyclerView>
 

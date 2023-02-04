@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<fragment
+<androidx.fragment.app.FragmentContainerView
     android:id="@+id/fragmentHost"
     app:navGraph="@navigation/nav_graph"
     android:name="androidx.navigation.fragment.NavHostFragment"
@@ -17,6 +17,12 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     >
-</fragment>
+</androidx.fragment.app.FragmentContainerView>
+
+<androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/recyclerview"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
