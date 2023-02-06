@@ -5,4 +5,5 @@ object Constants {
     const val KEY = "AIzaSyCO__x6rsVAwStDJukt7yHGVP7mDHY7u38"
     const val ITEM_KEY="keyItem"
     const val ITEM_BUNDLE_KEY="keyItem"
+    const val ITEM_BUNDLE_VIDEO_KEY="keyItem"
 }

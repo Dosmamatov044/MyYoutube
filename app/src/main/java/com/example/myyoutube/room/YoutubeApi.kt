@@ -33,4 +33,13 @@ interface YoutubeApi {
     ): Response<YoutubePlaylistModel>
 
 
+    @GET("youtube/v3/videos")
+    suspend fun fetchDetailVideo(
+        @Query("part") part: String,
+        @Query("key") key: String,
+        @Query("playlistId") playlistId: String?,
+        @Query("pageToken") pageToken: String?,
+        @Query("videoId")videoId:String?
+    ): Response<List<String>>
+
 }
