@@ -5,4 +5,5 @@ data class Item(
     val id: String,
     val kind: String,
     val snippet: Snippet
+    ,val token:String?=null
 ):java.io.Serializable

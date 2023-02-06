@@ -1,6 +1,6 @@
 package com.example.myyoutube
 
-import com.example.myyoutube.model.JSON.Item
+
 import com.example.myyoutube.model.YoutubePlaylistModel
 import retrofit2.Response
 import retrofit2.http.GET
@@ -31,6 +31,19 @@ interface YoutubeApi {
         @Query("pageToken") pageToken: String?,
         @Query("videoId")videoId:String?
     ): Response<YoutubePlaylistModel>
+
+
+
+    @GET("youtube/v3/playlistItems")
+    suspend fun  getVideo(
+        @Query("part") part: String,
+        @Query("key") key: String,
+        @Query("playlistId") playlistId: String?,
+        @Query("pageToken") pageToken: String?,
+        @Query("videoId")videoId:String?
+    ):Response<YoutubePlaylistModel>
+
+
 
 
 }

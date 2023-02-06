@@ -40,6 +40,14 @@ class PlaylistDescriptionAdapter(val onClick: (Item,Int) -> Unit) :
 
 
 
+        binding.listVideoItemId.setOnClickListener {
+
+            onClick(listPlaylist[position],position)
+        }
+
+
+
+
     }
 
     override fun getItemCount(): Int {

@@ -11,10 +11,10 @@
 
 
 
-    <VideoView
+    <androidx.media3.ui.PlayerView
         android:id="@+id/videoView"
-        android:layout_width="wrap_content"
-        android:layout_height="240dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@+id/tv_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

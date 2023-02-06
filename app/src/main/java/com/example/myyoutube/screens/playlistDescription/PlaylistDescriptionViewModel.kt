@@ -11,8 +11,9 @@ import kotlinx.coroutines.launch
 
 class PlaylistDescriptionViewModel:ViewModel() {
 
-    val playlist= MutableLiveData<List<Item>> ()
 
+     val list:MutableList<Item> = mutableListOf<Item>()
+    val playlist= MutableLiveData<List<Item>> ()
 
 
 
@@ -31,7 +32,22 @@ class PlaylistDescriptionViewModel:ViewModel() {
 
                     Log.d("ololo", "ok")
 
-                    playlist.value = data.body()?.items
+
+
+
+                    data.body()?.items?.forEach {
+                        val token = data.body()?.nextPageToken
+                        val item=Item(it.etag,it.id,it.kind,it.snippet,token)
+                        list.add(item)
+
+                    }
+
+
+
+
+
+                    playlist.value = list
+
                 }else{
 
                     Log.d("oloo", data.message().toString())
