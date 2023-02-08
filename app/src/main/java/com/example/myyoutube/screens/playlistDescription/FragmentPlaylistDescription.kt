@@ -69,7 +69,7 @@ class FragmentPlaylistDescription : Fragment() {
 
     private fun init() {
 
-        val recyclerView = binding.recyclerView
+        val recyclerView = binding.rvPlaylistVideo
         adapter = PlaylistDescriptionAdapter(this::onItemClick)
         recyclerView.adapter = adapter
         recyclerView.layoutManager =
@@ -82,7 +82,7 @@ class FragmentPlaylistDescription : Fragment() {
             Constants.ITEM_VIDEO_KEY, bundleOf(
                 Constants.ITEM_VIDEO_ID_BUNDLE_KEY to model.id,
                 Constants.ITEM_VIDEO_POSITION_BUNDLE_KEY to position,
-                Constants.ITEM_VIDEO_TOKEN_BUNDLE_KEY to model.token.toString()
+                Constants.ITEM_VIDEO_TOKEN_BUNDLE_KEY to model.contentDetails?.videoId.toString()
             )
 
 

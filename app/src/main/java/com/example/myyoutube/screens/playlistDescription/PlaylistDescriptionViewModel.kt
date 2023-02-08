@@ -37,7 +37,7 @@ class PlaylistDescriptionViewModel:ViewModel() {
 
                     data.body()?.items?.forEach {
                         val token = data.body()?.nextPageToken
-                        val item=Item(it.etag,it.id,it.kind,it.snippet,token)
+                        val item=Item(it.etag,it.id,it.kind,it.snippet,token,it.contentDetails)
                         list.add(item)
 
                     }

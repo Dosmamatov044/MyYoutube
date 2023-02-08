@@ -7,5 +7,6 @@ data class YoutubePlaylistModel(
     val items: List<Item>,
     val kind: String,
     val nextPageToken: String,
-    val pageInfo: PageInfo
+    val pageInfo: PageInfo,
+    var contentDetails: ContentDetails? = null
 )
